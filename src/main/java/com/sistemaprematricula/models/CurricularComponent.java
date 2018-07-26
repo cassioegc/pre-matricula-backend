@@ -1,4 +1,4 @@
-package com.sistemaprematricula.models;
+/package com.sistemaprematricula.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +14,7 @@ import javax.validation.constraints.NotNull;
 public class CurricularComponent {
 
 	@Id
+	@Column(name="id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
