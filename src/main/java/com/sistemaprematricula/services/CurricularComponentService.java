@@ -3,6 +3,8 @@ package com.sistemaprematricula.services;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,7 @@ public class CurricularComponentService {
 		return this.curricularComponentRepository.findAll();
 	}
 
+	@Transactional
 	public CurricularComponent save(CurricularComponent curricularComponent) {
 		return this.curricularComponentRepository.save(curricularComponent);
 	}
