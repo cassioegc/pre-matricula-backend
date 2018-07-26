@@ -32,8 +32,8 @@ public class CurricularComponentController {
 		return this.curricularComponentService.save(curricularComponent);
 	}
 
-	@RequestMapping(value = "/{code}", method = RequestMethod.GET)
-	public CurricularComponent getCurricularComponent(@PathVariable String code) {
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	public CurricularComponent getCurricularComponent(@PathVariable Long code) {
 		return this.curricularComponentService.getCurricularComponent(code).get();
 	}
 
